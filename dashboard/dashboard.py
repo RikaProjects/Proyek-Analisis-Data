@@ -5,19 +5,12 @@ import streamlit as st
 from babel.numbers import format_currency
 import os
 
-st.set_page_config(
-    page_title="E-Commerce Dashboard",
-    page_icon="📊",
-    layout="wide"
-)
-
-sns.set(style="whitegrid")
-
 @st.cache_data
 def load_data():
 
     base_path = os.path.dirname(__file__)
-    file_path = os.path.join(base_path, "dashboard", "all_data.csv")
+
+    file_path = os.path.join(base_path, "all_data.csv")
 
     df = pd.read_csv(file_path)
 
@@ -216,4 +209,4 @@ st.pyplot(fig)
 
 st.markdown("---")
 
-st.caption("Dibuat oleh Rika Rostika Afipah - Data Science Portfolio")
+st.caption('Copyright @ Rika Rostika Afipah 2025')
